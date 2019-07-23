@@ -28,19 +28,17 @@ const newPerson = new Profile({
     password: '123123'
 })
 
-function callback() {
+function callbackFunction() {
+    
     return (err, data) => {
-        if(err) {
-            console.log(`Что-то пошло не так ${err}`)
+        if (err) {
+            console.log(error)
         } else {
-           return data  
+            console.log(data)
         }
-        
-         
     }
 }
 
-console.log(ApiConnector.getStocks(callback))
-// console.log(ApiConnector.createUser(newPerson, callback))
 
-
+// console.log(ApiConnector.getStocks(callback(err, data)))
+console.log(ApiConnector.createUser(newPerson, callbackFunction('Всё очень плохо', 'Выполнение запроса')))
