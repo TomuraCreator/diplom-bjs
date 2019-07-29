@@ -77,7 +77,6 @@ function main() {
                             if(err) throw err;
                             FriendPerson.createUser((err, data)=>{
                                 if(err) throw err;
-                                    if(err) throw err;
                                     NewPerson.transferMoney({to: 'koresh', amount: 500}, (err, data)=> {
                                         if(err) throw err
                                 })
